@@ -8,4 +8,6 @@ achatar :: Tree a -> [a]
 achatar (Leaf x) = [x]
 achatar (Node l x r) = achatar l ++ [x] ++ achatar r
 
-data ArvBin a = Vazia | Nodo (ArvBin a) a (ArvBin a) deriving
+data ArvBin a = Vazia | Nodo (ArvBin a) a (ArvBin a) deriving (Show)
+
+data Arv a = ArvVazia | ArvNodo a [Arv a]
